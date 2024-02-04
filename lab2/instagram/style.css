@@ -1,0 +1,179 @@
+* {
+    font-family: BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.loginpage {
+    padding: 32px 0 32px 0;
+}
+
+.flex-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.loginpage__log {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 350px;
+}
+
+.loginpage__log .sign-in {
+    height: 390px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    border: 1px solid #CED0D4;
+    border-radius: 1px;
+    margin: 0 0 10px;
+    padding: 40px 0;
+}
+.loginpage__log .sign-up {
+    border: 1px solid #CED0D4;
+    border-radius: 1px;
+    height: 62px;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 14px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.loginpage__log .sign-up a {
+    color: #0095F6;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.loginpage__form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.loginpage__form input {
+    margin-top: 5px;
+    width: 259px;
+    height: 36px;
+    border: 1px solid #CED0D4;
+    border-radius: 4px;
+    padding: 9px 0 7px 8px;
+}
+
+.loginpage__form input:first-child {
+    margin-top: 25px;;
+}
+
+.button {
+    margin: 15px 0;
+    width: 259px;
+    height: 30px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgba(0,149,246,0.6);
+    color: #fff
+}
+
+.loginpage .logo {
+    height: 50px;
+    width: 175px;
+}
+
+.loginpage .logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.loginpage .or {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.loginpage .or::before {
+   content: "";
+   display: block;
+   width: 102px;
+   border-top: 1px solid #CED0D4;
+   margin-top: 6px;
+   margin-right: 15px;
+}
+
+.loginpage .or::after {
+    content: "";
+    display: block;
+    width: 102px;
+    border-top: 1px solid #CED0D4;
+    margin-top: 6px;
+    margin-left: 15px;
+ }
+
+ .loginpage .facebook {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 14px;
+    text-decoration: none;
+    margin-top: 30px;
+    width: 259px;
+    color:darkblue
+ }
+ .loginpage .facebook img {
+    margin-right: 10px;
+ }
+
+ .loginpage .forgot {
+    text-decoration: none;
+    margin-top: 20px;
+    color: darkblue;
+    font-size: 12px;
+ }
+
+ .download {
+    margin-top: 10px;
+ }
+ .download__apps {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+ }
+
+ .download__apps .googleplay {
+    height: 40px;
+    width: 110px;
+    margin-left: 15px;
+ }
+
+ .download__apps .mircosoft {
+    height: 40px;
+    width: 135px;
+ }
+ 
+ .download__apps img {
+    height: 100%;
+    width: 100%;
+ }
+
+ .footer {
+    display: flex;
+    justify-content: center;
+ }
+ .footer div {
+    width: 850px;
+    text-align: center;
+ }
+ .footer div a{
+    color: grey;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 30px;
+ }
+
+
+
