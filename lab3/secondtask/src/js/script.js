@@ -4,8 +4,6 @@ window.addEventListener("DOMContentLoaded", () => {
     addButton = document.querySelector(".todo__button"),
     addInput = document.querySelector('.todo__add input[type="text"]');
 
-  console.dir(list);
-
   addButton.addEventListener("click", (e) => {
     e.preventDefault();
     if (addInput.value != "") {
