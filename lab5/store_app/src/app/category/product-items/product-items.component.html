@@ -1,0 +1,34 @@
+@for(product of mainCatalog; track product.id) {
+<div class="products-item">
+  <div>
+    <img [src]="product.img" />
+  </div>
+  <hr />
+  <h3>
+    <a
+      [href]="[product.link]"
+      [title]="product.name + 'details'"
+      target="_blank"
+    >
+      {{ product.name }}
+    </a>
+  </h3>
+
+  @if (product.description) {
+  <p class="descr">{{ product.description }}</p>
+  } @if (product.rating) {
+  <p class="star">{{ starMaker(product.rating) }}</p>
+  }
+
+  <p class="price">{{ product.price }} ₸</p>
+
+  <div class="buttons">
+    <button class="buttons__share" (click)="share(product)">Share</button>
+    <button class="buttons__like" (click)="likeUp(product)">
+      <span id="icon"><i class="far fa-thumbs-up"></i></span>
+      👍<span id="count">{{ product.like }}</span> Like
+    </button>
+    <span class="close-icon" (click)="delete($event)">✖</span>
+  </div>
+</div>
+}

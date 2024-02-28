@@ -1,0 +1,21 @@
+<div class="products-list">
+  <ul class="tabs">
+    <li id="1" class="tab tab_active" (click)="addClass($event)">
+      <div>Iphone</div>
+    </li>
+    <li id="2" class="tab" (click)="addClass($event)">
+      <div>Samsung</div>
+    </li>
+    <li id="3" class="tab" (click)="addClass($event)">
+      <div>Google Pixel</div>
+    </li>
+    <li id="4" class="tab" (click)="addClass($event)"><div>Other</div></li>
+  </ul>
+  <app-product-items [selectedTabId]="this.tabId"></app-product-items>
+</div>
+
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+-->

@@ -1,0 +1,100 @@
+p {
+  margin: 0;
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  color: brown;
+}
+
+.products-item {
+  position: relative;
+  margin-top: 20px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  width: 320px;
+  margin-right: 40px;
+}
+
+.products-item:nth-child(4) {
+  margin-right: 0;
+}
+
+hr {
+  width: 250px;
+  border-top: none;
+  border-color: rgba(0, 0, 0, 0.3);
+}
+
+.products-item:nth-child(8) {
+  margin-right: 0;
+}
+
+.products-item img {
+  height: 300px;
+}
+
+.products-item h3 {
+  margin-top: 10px;
+  margin-bottom: 3px;
+  font-size: 20px;
+}
+
+.buttons {
+  display: flex;
+}
+
+.products-item button {
+  outline: none;
+  border: none;
+  height: 30px;
+  width: 150px;
+  margin-top: 20px;
+  cursor: pointer;
+  display: block;
+  text-align: center;
+}
+.products-item button:active {
+  transform: scale(0.95);
+  transition-duration: 0.2s;
+}
+
+.star {
+  margin-top: 10px;
+}
+
+.price {
+  font-size: 23px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.buttons__like {
+  background: #e2725b;
+  border-radius: 2px;
+}
+
+.buttons__share {
+  background: #3f826d;
+}
+
+.close-icon {
+  display: none;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  right: 5px;
+}
+
+.products-item:hover {
+  .close-icon {
+    display: block;
+  }
+}
