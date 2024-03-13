@@ -28,7 +28,7 @@
       <span id="icon"><i class="far fa-thumbs-up"></i></span>
       👍<span id="count">{{ product.like }}</span> Like
     </button>
-    <span class="close-icon" (click)="delete($event)">✖</span>
+    <span class="close-icon" (click)="delete(product.id)">✖</span>
   </div>
 </div>
 }

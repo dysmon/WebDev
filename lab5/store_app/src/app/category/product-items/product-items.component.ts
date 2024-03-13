@@ -55,11 +55,7 @@ export class ProductItemsComponent implements OnInit {
     window.open(telegramLink, "_blank");
   }
 
-  delete(event: MouseEvent) {
-    const element = event.target as HTMLElement;
-    const productItem = element.closest(".products-item");
-    if (productItem) {
-      productItem.remove();
-    }
+  delete(id: number) {
+    this.mainCatalog = this.mainCatalog?.filter((item) => item.id !== id);  
   }
 }
