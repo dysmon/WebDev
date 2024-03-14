@@ -1,12 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectorRef} from '@angular/core';
 import { Album } from '../album-list/service/album';
 import { CommonModule, Location } from '@angular/common';
-import { AlbumDetailAPIService } from './service/album-detail-api.service';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { AlbumListComponent } from '../album-list/album-list.component';
 import { AlbumListApiService } from '../album-list/service/album-list-api.service';
-import { title } from 'process';
 
 @Component({
   selector: 'app-album-detail',
@@ -16,10 +14,9 @@ import { title } from 'process';
   styleUrl: './album-detail.component.css',
 })
 export class AlbumDetailComponent {
-  album!: Album;
+  album: Album | undefined;
 
   constructor(
-    private http: AlbumDetailAPIService,
     private route: ActivatedRoute,
     private location: Location,
     private api: AlbumListApiService
@@ -29,15 +26,10 @@ export class AlbumDetailComponent {
     const routeParams = this.route.snapshot.paramMap;
     const id = Number(routeParams.get('id'));
 
-    this.http.getAlbum(id).subscribe((album) => (this.album = album));
+    this.album = this.api.albums.find((item) => item.id == id);
   }
 
   back() {
     this.location.back();
-  }
-
-  save(id: number) {
-    this.api.albums[id].title = this.album.title;
-    this.http.saveChanges(this.album);
   }
 }

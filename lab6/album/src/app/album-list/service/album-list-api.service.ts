@@ -15,19 +15,7 @@ export class AlbumListApiService {
     this.getAlbums().subscribe((data) => (this.albums = data));
   }
 
-  getAlbums(): Observable<Album[]> {
+  private getAlbums(): Observable<Album[]> {
     return this.http.get<Album[]>(`${BASE_URL}${this.url}`);
-  }
-
-  deleteAlbumById(id: number) {
-    this.http
-      .delete(`${BASE_URL}${this.url}/${id}`)
-      .subscribe((response) => console.log(response));
-  }
-
-  createAlbum(album: Album) {
-    this.http
-      .post(`${BASE_URL}${this.url}`, album)
-      .subscribe((data) => console.log(data));
   }
 }

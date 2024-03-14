@@ -38,3 +38,12 @@ nav a:hover {
 .about-section p {
   color: #666;
 }
+footer {
+  background-color: #f8f9fa;
+  height: 150px;
+  text-align: center;
+  margin-top: 286px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}

@@ -1,4 +1,5 @@
 <ul class="container">
+  <input type="text" [(ngModel)]="newAlbum" required="" />
   <button class="create-btn" (click)="create()">Create</button>
   <li *ngFor="let album of albums" class="item">
     <a [routerLink]="['/albums', album.id]">
