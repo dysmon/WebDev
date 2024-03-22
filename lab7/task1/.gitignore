@@ -2,7 +2,7 @@
 Lib/
 Scripts/
 include/
-pyvenv/
+pyvenv.cfg
 
 # IDE-specific directories
 .idea/
